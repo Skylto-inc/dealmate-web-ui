@@ -1,0 +1,173 @@
+{
+  "phishingPatterns": [
+    "bit.ly/scam",
+    "tinyurl.com/fake",
+    "phishing-site.com",
+    "amazom.com",
+    "amaz0n.com",
+    "flipkrt.com",
+    "paypal-secure.fake",
+    "banking-login.phish",
+    "free-iphone-winner",
+    "click-here-now.suspicious",
+    "urgent-action-required",
+    "verify-account.scam",
+    "secure-payment.fraud",
+    "account-suspended.phish",
+    "winner-selected.scam",
+    "claim-reward.fake",
+    "limited-time-offer.suspicious",
+    "exclusive-deal.phish",
+    "paytm-secure.fake",
+    "gpay-rewards.scam"
+  ],
+  "trustedDomains": [
+    "amazon.in",
+    "flipkart.com",
+    "myntra.com",
+    "ajio.com",
+    "snapdeal.com",
+    "paytm.com",
+    "phonepe.com",
+    "cred.club",
+    "cashkaro.com"
+  ],
+  "sellers": [
+    {
+      "id": "seller1",
+      "name": "TechStore Pro",
+      "rating": 4.8,
+      "reviewCount": 1250,
+      "accountAge": 1095,
+      "disputeRate": 0.02,
+      "returnRate": 0.05
+    },
+    {
+      "id": "seller2",
+      "name": "FashionHub",
+      "rating": 4.5,
+      "reviewCount": 890,
+      "accountAge": 730,
+      "disputeRate": 0.03,
+      "returnRate": 0.08
+    },
+    {
+      "id": "seller3",
+      "name": "SuspiciousSeller",
+      "rating": 2.1,
+      "reviewCount": 12,
+      "accountAge": 30,
+      "disputeRate": 0.25,
+      "returnRate": 0.35
+    },
+    {
+      "id": "seller4",
+      "name": "NewSeller",
+      "rating": 3.2,
+      "reviewCount": 25,
+      "accountAge": 45,
+      "disputeRate": 0.1,
+      "returnRate": 0.15
+    },
+    {
+      "id": "seller5",
+      "name": "TrustedMart",
+      "rating": 4.9,
+      "reviewCount": 5420,
+      "accountAge": 1825,
+      "disputeRate": 0.01,
+      "returnRate": 0.03
+    }
+  ],
+  "priceHistory": {
+    "product1": {
+      "productId": "product1",
+      "productName": "Samsung Galaxy S23",
+      "prices": [
+        { "price": 79999, "timestamp": 1737936000000, "source": "amazon" },
+        { "price": 78999, "timestamp": 1738108800000, "source": "flipkart" },
+        { "price": 80999, "timestamp": 1738281600000, "source": "amazon" },
+        { "price": 79499, "timestamp": 1738454400000, "source": "myntra" }
+      ]
+    },
+    "product2": {
+      "productId": "product2",
+      "productName": "Nike Air Max",
+      "prices": [
+        { "price": 7999, "timestamp": 1737936000000, "source": "nike.com" },
+        { "price": 8199, "timestamp": 1738108800000, "source": "ajio" },
+        { "price": 7899, "timestamp": 1738281600000, "source": "myntra" },
+        { "price": 24999, "timestamp": 1738540800000, "source": "suspicious-site" }
+      ]
+    },
+    "product3": {
+      "productId": "product3",
+      "productName": "Apple MacBook Pro",
+      "prices": [
+        { "price": 199900, "timestamp": 1737936000000, "source": "apple.com" },
+        { "price": 195900, "timestamp": 1738108800000, "source": "amazon" },
+        { "price": 198900, "timestamp": 1738281600000, "source": "flipkart" },
+        { "price": 197900, "timestamp": 1738454400000, "source": "croma" }
+      ]
+    }
+  },
+  "categoryThresholds": {
+    "electronics": 0.7,
+    "fashion": 0.9,
+    "home": 0.8,
+    "food": 0.6,
+    "beauty": 0.85,
+    "sports": 0.75,
+    "books": 0.95,
+    "toys": 0.8,
+    "jewelry": 0.6,
+    "automotive": 0.65,
+    "default": 0.85
+  },
+  "suspiciousBehaviorPatterns": [
+    {
+      "pattern": "rapid_clicking",
+      "threshold": 10,
+      "timeWindow": 1000,
+      "description": "More than 10 clicks in 1 second"
+    },
+    {
+      "pattern": "high_activity",
+      "threshold": 100,
+      "timeWindow": 60000,
+      "description": "More than 100 actions per minute"
+    },
+    {
+      "pattern": "pattern_clicking",
+      "threshold": 50,
+      "timeWindow": 10000,
+      "description": "Repetitive clicking pattern detected"
+    }
+  ],
+  "fraudAlerts": [
+    {
+      "id": "alert1",
+      "timestamp": 1738540800000,
+      "type": "fake_deal",
+      "severity": "high",
+      "entityId": "deal123",
+      "entityType": "deal",
+      "confidence": 0.92,
+      "description": "Deal shows 95% discount on iPhone 15 Pro",
+      "actionTaken": "Deal blocked from display",
+      "resolved": true
+    },
+    {
+      "id": "alert2",
+      "timestamp": 1738537200000,
+      "type": "phishing_link",
+      "severity": "critical",
+      "entityId": "url456",
+      "entityType": "url",
+      "confidence": 0.98,
+      "description": "URL contains known phishing pattern: amazom.com",
+      "actionTaken": "Link blocked and reported",
+      "resolved": true
+    }
+  ]
+}
